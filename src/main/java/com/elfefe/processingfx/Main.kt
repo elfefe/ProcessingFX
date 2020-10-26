@@ -1,13 +1,11 @@
 package com.elfefe.processingfx
 
-import com.elfefe.processingfx.javafx.Controller
-import com.elfefe.processingfx.processing.MyPApplet
+import com.elfefe.processingfx.processing.BoardApplet
 import processing.core.PApplet
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        println("Main ${Controller.order++}")
-        PApplet.main(MyPApplet::class.java)
+        PApplet.main(BoardApplet::class.java)
     }
 }
