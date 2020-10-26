@@ -41,6 +41,11 @@ fun Double.until(exclusif: Double, steps: Double = 1.0, foreach: (Double) -> Uni
                 .takeWhile { if (steps > 0) it < exclusif else it > exclusif }
                 .forEach { foreach(it) }
 
+fun Float.until(exclusif: Float, steps: Float = 1f, foreach: (Float) -> Unit) =
+        generateSequence(this, { it + steps })
+                .takeWhile { if (steps > 0) it < exclusif else it > exclusif }
+                .forEach { foreach(it) }
+
 fun Double.decimalLength() = toString().split(".").run {
     if (size == 2) 10.0.pow(this[size - 1].length).toLong()
     else 0

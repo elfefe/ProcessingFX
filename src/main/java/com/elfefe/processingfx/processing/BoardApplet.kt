@@ -17,6 +17,35 @@ class BoardApplet : PApplet(), MainApp.MainListener {
     lateinit var main: MainApp
     private val drawProperty: DrawProperty = DrawProperty()
 
+    override fun init() {
+        main = MainApp.INSTANCE
+
+        main.variablesLayout.run {
+            yPos.addListener { _, _, value ->
+                drawProperty.verticalIndicatorPosition = value.toFloat()
+            }
+            xPos.addListener { _, _, value ->
+                drawProperty.horizontalIndicatorPosition = value.toFloat()
+            }
+            xGap.addListener { _, _, value ->
+                drawProperty.horizontalStepsGap = value.toFloat()
+            }
+            yGap.addListener { _, _, value ->
+                drawProperty.verticalStepsGap = value.toFloat()
+            }
+            xAxe.addListener { _, _, value ->
+                drawProperty.verticalIndicatorPosition = value.toFloat()
+            }
+            yAxe.addListener { _, _, value ->
+                drawProperty.horizontalIndicatorPosition = value.toFloat()
+            }
+        }
+
+        main.functionLayout.currentFunction.addListener { _, _, value ->
+            drawProperty.function = Function(value, "x")
+        }
+    }
+
     override fun initSurface(): PSurface {
         g = createPrimaryGraphics()
         val genericSurface = g.createSurface()
@@ -154,27 +183,4 @@ class BoardApplet : PApplet(), MainApp.MainListener {
             var verticalMouseIntersection: Float = 0f,
             var function: Function = Function("x")
     )
-
-    override fun init() {
-        main = MainApp.INSTANCE
-
-        main.variablesLayout.run {
-            yPos.addListener { _, _, value ->
-                drawProperty.verticalIndicatorPosition = value.toFloat()
-            }
-            xPos.addListener { _, _, value ->
-                drawProperty.horizontalIndicatorPosition = value.toFloat()
-            }
-            xGap.addListener { _, _, value ->
-                drawProperty.horizontalStepsGap = value.toFloat()
-            }
-            yGap.addListener { _, _, value ->
-                drawProperty.verticalStepsGap = value.toFloat()
-            }
-        }
-
-        main.functionLayout.currentFunction.addListener { _, _, value ->
-            drawProperty.function = Function(value, "x")
-        }
-    }
 }

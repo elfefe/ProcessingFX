@@ -3,6 +3,7 @@ package com.elfefe.processingfx.javafx.layout
 import com.elfefe.processingfx.javafx.MainApp
 import com.elfefe.processingfx.util.*
 import javafx.beans.property.SimpleDoubleProperty
+import javafx.beans.property.SimpleFloatProperty
 import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.control.*
@@ -11,21 +12,26 @@ import javafx.scene.paint.Color
 
 class VariableLayout : VBox() {
     companion object {
+        const val X_AXE_LABEL = "X axe"
+        const val Y_AXE_LABEL = "Y axe"
         const val X_GAP_LABEL = "X gap"
         const val Y_GAP_LABEL = "Y gap"
         const val X_POS_LABEL = "X pos"
         const val Y_POS_LABEL = "Y pos"
         const val EXAMPLES = "Examples"
         const val OPTIONS = "Options"
+        const val DEFAULT_AXE = "0"
         const val DEFAULT_GAP = "5"
         const val DEFAULT_POS = "0"
     }
     private val main = MainApp.INSTANCE
 
-    val xGap = SimpleDoubleProperty(DEFAULT_GAP.toDouble())
-    val yGap = SimpleDoubleProperty(DEFAULT_GAP.toDouble())
-    val xPos = SimpleDoubleProperty(DEFAULT_POS.toDouble())
-    val yPos = SimpleDoubleProperty(DEFAULT_POS.toDouble())
+    val xAxe = SimpleFloatProperty(DEFAULT_AXE.toFloat())
+    val yAxe = SimpleFloatProperty(DEFAULT_AXE.toFloat())
+    val xGap = SimpleFloatProperty(DEFAULT_GAP.toFloat())
+    val yGap = SimpleFloatProperty(DEFAULT_GAP.toFloat())
+    val xPos = SimpleFloatProperty(DEFAULT_POS.toFloat())
+    val yPos = SimpleFloatProperty(DEFAULT_POS.toFloat())
 
     init {
         background = backgroundColor(Color.TRANSPARENT)
@@ -48,17 +54,35 @@ class VariableLayout : VBox() {
         responsiveSize(options)
     }
 
+    private fun xAxe() = HBox().apply {
+        Label(X_POS_LABEL)
+        Slider(-1.0, 1.0,0.0).apply {
+            valueProperty().addListener { _, _, value ->
+                xAxe.value = value.toFloat()
+            }
+        }
+    }
+
+    private fun yAxe() = HBox().apply {
+        Label(X_POS_LABEL)
+        Slider(-1.0, 1.0,0.0).apply {
+            valueProperty().addListener { _, _, value ->
+                yAxe.value = value.toFloat()
+            }
+        }
+    }
+
     private fun xPos() = Field(X_POS_LABEL).apply {
         entry.text = DEFAULT_POS
         entry.textProperty().addListener { _, _, value ->
-            xPos.value = if (value.isEmpty()) 0.0 else value.toDouble()
+            xPos.value = if (value.isEmpty()) 0f else value.toFloat()
         }
     }
 
     private fun yPos() = Field(Y_POS_LABEL).apply {
         entry.text = DEFAULT_POS
         entry.textProperty().addListener { _, _, value ->
-            xPos.value = if (value.isEmpty()) 0.0 else value.toDouble()
+            xPos.value = if (value.isEmpty()) 0f else value.toFloat()
         }
     }
 
@@ -67,7 +91,7 @@ class VariableLayout : VBox() {
         entry.textProperty().addListener { _, _, value ->
             if (value.isEmpty()) entry.text = "1"
             else if (value.toDouble() < 1) entry.text = "1"
-            xGap.value = value.toDouble()
+            xGap.value = value.toFloat()
         }
     }
 
@@ -76,8 +100,8 @@ class VariableLayout : VBox() {
         entry.textProperty().addListener { _, _, value ->
             if (value.isEmpty()) entry.text = "1"
             else if (value.toDouble() < 1) entry.text = "1"
-            yGap.value = value.toDouble()
-            yGap.value.until(0.0) {}
+            yGap.value = value.toFloat()
+            yGap.value.until(0f) {}
         }
     }
 
@@ -86,7 +110,9 @@ class VariableLayout : VBox() {
                 xPos(),
                 yPos(),
                 xGap(),
-                yGap()
+                yGap(),
+                xAxe(),
+                yAxe()
         )
     })
 
