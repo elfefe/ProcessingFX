@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.parser.operators;
 
-import com.elfefe.fonctionne.mathengine.parser.operators.binary.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.binary.logical.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.unary.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.unary.simple.*;
+import com.elfefe.processingfx.mathengine.parser.operators.binary.*;
+import com.elfefe.processingfx.mathengine.parser.operators.binary.logical.*;
+import com.elfefe.processingfx.mathengine.parser.operators.unary.*;
+import com.elfefe.processingfx.mathengine.parser.operators.unary.simple.*;
 
 import java.util.ArrayList;
 import java.util.List;

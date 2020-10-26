@@ -1,10 +1,10 @@
 package com.elfefe.processingfx.mathengine.parser.operators.binary;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeFactory;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeNumber;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodePercent;
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeFactory;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeNumber;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodePercent;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
 
 public class AsPercentOf extends BinaryOperator
 {

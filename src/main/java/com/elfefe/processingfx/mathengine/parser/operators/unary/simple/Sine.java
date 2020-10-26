@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary.simple;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeFactory;
-import com.elfefe.fonctionne.mathengine.parser.operators.unary.TrigOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeFactory;
+import com.elfefe.processingfx.mathengine.parser.operators.unary.TrigOperator;
 
 public class Sine extends TrigOperator {
 

@@ -1,10 +1,10 @@
 package com.elfefe.processingfx.mathengine.parser;
 
 import org.apache.commons.lang3.StringUtils;
-import com.elfefe.fonctionne.mathengine.Utils;
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
-import com.elfefe.fonctionne.mathengine.parser.operators.CustomOperator;
+import com.elfefe.processingfx.mathengine.Utils;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.operators.CustomOperator;
 
 public final class ExpressionParser implements Parser<String, Node> {
 

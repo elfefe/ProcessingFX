@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.gui;
 
-import com.elfefe.fonctionne.mathengine.MathUtils;
-import com.elfefe.fonctionne.mathengine.Utils;
-import com.elfefe.fonctionne.mathengine.unitconversion.ConversionEngine;
-import com.elfefe.fonctionne.mathengine.unitconversion.units.Conversion;
+import com.elfefe.processingfx.mathengine.MathUtils;
+import com.elfefe.processingfx.mathengine.Utils;
+import com.elfefe.processingfx.mathengine.unitconversion.ConversionEngine;
+import com.elfefe.processingfx.mathengine.unitconversion.units.Conversion;
 
 import javax.swing.*;
 import java.awt.*;

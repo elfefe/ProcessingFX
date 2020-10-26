@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.differential;
 
-import com.elfefe.fonctionne.mathengine.Function;
+import com.elfefe.processingfx.mathengine.Function;
 
 /**
  * Class representing a way of numerically estimating the derivatives of a

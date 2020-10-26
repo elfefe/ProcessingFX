@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeMatrix;
-import com.elfefe.fonctionne.mathengine.parser.operators.UnaryOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeMatrix;
+import com.elfefe.processingfx.mathengine.parser.operators.UnaryOperator;
 
 public abstract class MatrixOperator extends UnaryOperator
 {

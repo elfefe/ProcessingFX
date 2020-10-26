@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.nodes;
 
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
-import com.elfefe.fonctionne.mathengine.parser.operators.Operator;
-import com.elfefe.fonctionne.mathengine.parser.operators.UnaryOperator;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.operators.Operator;
+import com.elfefe.processingfx.mathengine.parser.operators.UnaryOperator;
 
 import java.util.Objects;
 

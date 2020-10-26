@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.parser;
 
-import com.elfefe.fonctionne.mathengine.linearalgebra.Matrix;
-import com.elfefe.fonctionne.mathengine.linearalgebra.Vector;
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.OperatorProvider;
+import com.elfefe.processingfx.mathengine.linearalgebra.Matrix;
+import com.elfefe.processingfx.mathengine.linearalgebra.Vector;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.parser.operators.OperatorProvider;
 
 import java.util.Map;
 

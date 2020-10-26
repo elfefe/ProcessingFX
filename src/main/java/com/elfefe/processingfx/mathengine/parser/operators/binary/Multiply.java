@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.parser.operators.binary;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
 
 import java.util.function.BiFunction;
 

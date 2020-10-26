@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine;
 
-import com.elfefe.fonctionne.mathengine.special.Gamma;
+import com.elfefe.processingfx.mathengine.special.Gamma;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

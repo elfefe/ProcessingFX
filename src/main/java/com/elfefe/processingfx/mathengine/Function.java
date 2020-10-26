@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine;
 
-import com.elfefe.fonctionne.mathengine.parser.AngleUnit;
-import com.elfefe.fonctionne.mathengine.parser.Evaluator;
-import com.elfefe.fonctionne.mathengine.parser.nodes.Node;
+import com.elfefe.processingfx.mathengine.parser.AngleUnit;
+import com.elfefe.processingfx.mathengine.parser.Evaluator;
+import com.elfefe.processingfx.mathengine.parser.nodes.Node;
 
 /**
  * Class representing a function of one variable that can be evaluated

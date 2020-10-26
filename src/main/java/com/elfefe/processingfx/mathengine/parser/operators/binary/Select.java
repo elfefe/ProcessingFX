@@ -1,10 +1,10 @@
 package com.elfefe.processingfx.mathengine.parser.operators.binary;
 
-import com.elfefe.fonctionne.mathengine.parser.EvaluationContext;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeFunction;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeVector;
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.EvaluationContext;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeFunction;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeVector;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
 
 public class Select extends BinaryOperator {
 

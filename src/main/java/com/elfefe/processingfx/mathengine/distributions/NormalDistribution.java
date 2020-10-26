@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.distributions;
 
-import com.elfefe.fonctionne.mathengine.special.Erf;
+import com.elfefe.processingfx.mathengine.special.Erf;
 
 /**
  * Class representing the Normal {@link ProbabilityDistribution}

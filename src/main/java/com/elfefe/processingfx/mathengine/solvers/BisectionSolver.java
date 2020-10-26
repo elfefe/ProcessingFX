@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.solvers;
 
-import com.elfefe.fonctionne.mathengine.Function;
+import com.elfefe.processingfx.mathengine.Function;
 
 /**
  * Class representing a {@link RootBracketingMethod} that uses the Bisection

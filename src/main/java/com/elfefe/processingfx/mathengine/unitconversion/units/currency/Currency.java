@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.unitconversion.units.currency;
 
 import org.xml.sax.SAXException;
-import com.elfefe.fonctionne.mathengine.unitconversion.units.SimpleSubUnit;
-import com.elfefe.fonctionne.mathengine.unitconversion.units.SimpleUnitGroup;
-import com.elfefe.fonctionne.mathengine.unitconversion.units.SubUnit;
+import com.elfefe.processingfx.mathengine.unitconversion.units.SimpleSubUnit;
+import com.elfefe.processingfx.mathengine.unitconversion.units.SimpleUnitGroup;
+import com.elfefe.processingfx.mathengine.unitconversion.units.SubUnit;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;

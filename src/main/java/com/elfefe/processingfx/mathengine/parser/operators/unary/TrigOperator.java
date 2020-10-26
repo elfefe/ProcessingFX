@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary;
 
-import com.elfefe.fonctionne.mathengine.parser.AngleUnit;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeNumber;
+import com.elfefe.processingfx.mathengine.parser.AngleUnit;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeNumber;
 
 import java.util.function.Function;
 

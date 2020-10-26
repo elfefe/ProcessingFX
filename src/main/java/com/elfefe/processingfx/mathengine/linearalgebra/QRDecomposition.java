@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.linearalgebra;
 
-import com.elfefe.fonctionne.mathengine.MathUtils;
+import com.elfefe.processingfx.mathengine.MathUtils;
 
 /**
  * Sourced from the <a href="http://math.nist.gov/javanumerics/jama/">JAMA

@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.differential;
 
-import com.elfefe.fonctionne.mathengine.Function;
+import com.elfefe.processingfx.mathengine.Function;
 
 /**
  * {@link NumericalDifferentiationMethod} that uses the extended central

@@ -1,11 +1,11 @@
 package com.elfefe.processingfx.mathengine.differential.symbolic;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.Node;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeExpression;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeNumber;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeVariable;
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
-import com.elfefe.fonctionne.mathengine.parser.operators.UnaryOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.Node;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeExpression;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeNumber;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeVariable;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.operators.UnaryOperator;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

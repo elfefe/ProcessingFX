@@ -1,10 +1,10 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary;
 
-import com.elfefe.fonctionne.mathengine.Function;
-import com.elfefe.fonctionne.mathengine.differential.symbolic.Differentiator;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeFunction;
-import com.elfefe.fonctionne.mathengine.parser.operators.UnaryOperator;
+import com.elfefe.processingfx.mathengine.Function;
+import com.elfefe.processingfx.mathengine.differential.symbolic.Differentiator;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeFunction;
+import com.elfefe.processingfx.mathengine.parser.operators.UnaryOperator;
 
 public class Diff extends UnaryOperator
 {

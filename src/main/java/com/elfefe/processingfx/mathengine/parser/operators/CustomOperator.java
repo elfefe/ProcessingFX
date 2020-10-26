@@ -1,7 +1,7 @@
 package com.elfefe.processingfx.mathengine.parser.operators;
 
-import com.elfefe.fonctionne.mathengine.parser.EvaluationContext;
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.parser.EvaluationContext;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
 
 import java.util.HashMap;
 import java.util.Map;

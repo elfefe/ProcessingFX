@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.unitconversion.units;
 
-import com.elfefe.fonctionne.mathengine.BigRational;
+import com.elfefe.processingfx.mathengine.BigRational;
 
 public class SimpleSubUnit extends SubUnit
 {

@@ -1,13 +1,23 @@
 package com.elfefe.processingfx.util
 
 import javafx.scene.paint.Color
+import processing.core.PApplet
 
-val white = Color.web("#FFFFFF", 1.0)
+val WHITE = "#FFFFFF"
+val PRIMARY = "#363333"
+
+val white = Color.web(WHITE, 1.0)
 val functionCursor = Color.web("#e16428", 1.0)
-val primary = Color.web("#363333", 1.0)
+val primary = Color.web(PRIMARY, 1.0)
 val wall = Color.web("#272121", 1.0)
 val characters = Color.web("#f6e9e9", 1.0)
 val borders = Color.web("#302727", 1.0)
 val titles = Color.web("#ff7214", 1.0)
 
 fun Color.hex() = toString().replace(".{0,3}\$".toRegex(), "")
+
+fun PApplet.fxColor(color: Color): Int = color(
+            color.red.toFloat() / 255f,
+            color.green.toFloat() / 255f,
+            color.blue.toFloat() / 255f,
+            color.opacity.toFloat())

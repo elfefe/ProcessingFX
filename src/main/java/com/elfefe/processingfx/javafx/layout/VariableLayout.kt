@@ -11,12 +11,12 @@ import javafx.scene.paint.Color
 
 class VariableLayout : VBox() {
     companion object {
-        const val X_GAP_LABEL = "   X gap"
-        const val Y_GAP_LABEL = "   Y gap"
-        const val X_POS_LABEL = "   X pos"
-        const val Y_POS_LABEL = "   Y pos"
-        const val EXAMPLES = "   Examples"
-        const val OPTIONS = "   Options"
+        const val X_GAP_LABEL = "X gap"
+        const val Y_GAP_LABEL = "Y gap"
+        const val X_POS_LABEL = "X pos"
+        const val Y_POS_LABEL = "Y pos"
+        const val EXAMPLES = "Examples"
+        const val OPTIONS = "Options"
         const val DEFAULT_GAP = "5"
         const val DEFAULT_POS = "0"
     }

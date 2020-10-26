@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.regression;
 
-import com.elfefe.fonctionne.mathengine.StatUtils;
+import com.elfefe.processingfx.mathengine.StatUtils;
 
 /**
  * A RegressionModel that fits a straight line to a data set

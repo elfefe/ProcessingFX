@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.parser.operators.binary.logical;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeBoolean;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeNumber;
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeBoolean;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeNumber;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
 
 public class And extends BinaryOperator
 {

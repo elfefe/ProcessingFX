@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary;
 
-import com.elfefe.fonctionne.mathengine.MathUtils;
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
-import com.elfefe.fonctionne.mathengine.solvers.BrentSolver;
+import com.elfefe.processingfx.mathengine.MathUtils;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.solvers.BrentSolver;
 
 import java.util.List;
 

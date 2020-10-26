@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary.simple;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeDouble;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeNumber;
-import com.elfefe.fonctionne.mathengine.parser.operators.unary.NumberOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeDouble;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeNumber;
+import com.elfefe.processingfx.mathengine.parser.operators.unary.NumberOperator;
 
 import java.util.function.Function;
 

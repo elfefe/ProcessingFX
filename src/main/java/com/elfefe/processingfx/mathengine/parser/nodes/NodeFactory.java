@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.nodes;
 
 import org.apache.commons.lang3.StringUtils;
-import com.elfefe.fonctionne.mathengine.Utils;
-import com.elfefe.fonctionne.mathengine.parser.ExpressionParser;
+import com.elfefe.processingfx.mathengine.Utils;
+import com.elfefe.processingfx.mathengine.parser.ExpressionParser;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,10 @@
 package com.elfefe.processingfx.mathengine.parser;
 
-import com.elfefe.fonctionne.mathengine.Utils;
-import com.elfefe.fonctionne.mathengine.parser.nodes.Node;
-import com.elfefe.fonctionne.mathengine.parser.nodes.NodeConstant;
-import com.elfefe.fonctionne.mathengine.parser.operators.CustomOperator;
-import com.elfefe.fonctionne.mathengine.parser.operators.Operator;
+import com.elfefe.processingfx.mathengine.Utils;
+import com.elfefe.processingfx.mathengine.parser.nodes.Node;
+import com.elfefe.processingfx.mathengine.parser.nodes.NodeConstant;
+import com.elfefe.processingfx.mathengine.parser.operators.CustomOperator;
+import com.elfefe.processingfx.mathengine.parser.operators.Operator;
 
 import java.util.Collection;
 import java.util.HashMap;

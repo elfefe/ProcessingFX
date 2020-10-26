@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.solvers;
 
-import com.elfefe.fonctionne.mathengine.Function;
+import com.elfefe.processingfx.mathengine.Function;
 
 import java.util.ArrayList;
 import java.util.List;

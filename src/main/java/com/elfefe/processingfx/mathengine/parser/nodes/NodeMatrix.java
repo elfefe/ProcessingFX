@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.parser.nodes;
 
-import com.elfefe.fonctionne.mathengine.linearalgebra.Matrix;
+import com.elfefe.processingfx.mathengine.linearalgebra.Matrix;
 
 import java.util.Arrays;
 import java.util.function.BiFunction;

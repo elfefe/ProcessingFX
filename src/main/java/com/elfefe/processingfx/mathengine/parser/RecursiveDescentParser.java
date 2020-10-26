@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.parser;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.BinaryOperator;
-import com.elfefe.fonctionne.mathengine.parser.operators.Operator;
-import com.elfefe.fonctionne.mathengine.parser.operators.UnaryOperator;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.parser.operators.BinaryOperator;
+import com.elfefe.processingfx.mathengine.parser.operators.Operator;
+import com.elfefe.processingfx.mathengine.parser.operators.UnaryOperator;
 
 public final class RecursiveDescentParser implements Parser<Node, NodeConstant> {
 

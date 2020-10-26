@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.solvers;
 
-import com.elfefe.fonctionne.mathengine.Function;
-import com.elfefe.fonctionne.mathengine.differential.ExtendedCentralDifferenceMethod;
-import com.elfefe.fonctionne.mathengine.differential.symbolic.Differentiator;
+import com.elfefe.processingfx.mathengine.Function;
+import com.elfefe.processingfx.mathengine.differential.ExtendedCentralDifferenceMethod;
+import com.elfefe.processingfx.mathengine.differential.symbolic.Differentiator;
 
 /**
  * Class representing a {@link RootPolishingMethod} that uses the Newton Raphson

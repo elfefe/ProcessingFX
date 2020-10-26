@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.plotting;
 
-import com.elfefe.fonctionne.mathengine.Function;
+import com.elfefe.processingfx.mathengine.Function;
 
 import javax.swing.*;
 import java.awt.*;

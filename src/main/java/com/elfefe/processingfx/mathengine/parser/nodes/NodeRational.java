@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.parser.nodes;
 
-import com.elfefe.fonctionne.mathengine.BigRational;
+import com.elfefe.processingfx.mathengine.BigRational;
 
 import java.util.Objects;
 

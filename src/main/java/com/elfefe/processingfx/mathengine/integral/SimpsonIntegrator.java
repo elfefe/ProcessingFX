@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.integral;
 
-import com.elfefe.fonctionne.mathengine.Function;
+import com.elfefe.processingfx.mathengine.Function;
 
 /**
  * Class representing an {@link IntegrationMethod} that uses quadratic

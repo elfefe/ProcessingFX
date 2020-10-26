@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.gui;
 
-import com.elfefe.fonctionne.mathengine.Utils;
-import com.elfefe.fonctionne.mathengine.parser.AngleUnit;
-import com.elfefe.fonctionne.mathengine.parser.Evaluator;
-import com.elfefe.fonctionne.mathengine.parser.nodes.Node;
+import com.elfefe.processingfx.mathengine.Utils;
+import com.elfefe.processingfx.mathengine.parser.AngleUnit;
+import com.elfefe.processingfx.mathengine.parser.Evaluator;
+import com.elfefe.processingfx.mathengine.parser.nodes.Node;
 
 import javax.swing.*;
 import javax.swing.text.BadLocationException;

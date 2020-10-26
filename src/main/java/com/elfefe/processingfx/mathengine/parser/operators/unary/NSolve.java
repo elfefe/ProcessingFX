@@ -1,8 +1,8 @@
 package com.elfefe.processingfx.mathengine.parser.operators.unary;
 
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
-import com.elfefe.fonctionne.mathengine.solvers.ConvergenceCriteria;
-import com.elfefe.fonctionne.mathengine.solvers.NewtonRaphsonSolver;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.solvers.ConvergenceCriteria;
+import com.elfefe.processingfx.mathengine.solvers.NewtonRaphsonSolver;
 
 public class NSolve extends VectorOperator
 {

@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.parser.operators;
 
-import com.elfefe.fonctionne.mathengine.parser.EvaluationContext;
+import com.elfefe.processingfx.mathengine.parser.EvaluationContext;
 
 public abstract class Operator {
 

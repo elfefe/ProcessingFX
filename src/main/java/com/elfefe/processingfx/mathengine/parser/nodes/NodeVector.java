@@ -1,7 +1,7 @@
 package com.elfefe.processingfx.mathengine.parser.nodes;
 
 import org.apache.commons.lang3.StringUtils;
-import com.elfefe.fonctionne.mathengine.linearalgebra.Vector;
+import com.elfefe.processingfx.mathengine.linearalgebra.Vector;
 
 import java.util.Arrays;
 import java.util.function.BiFunction;

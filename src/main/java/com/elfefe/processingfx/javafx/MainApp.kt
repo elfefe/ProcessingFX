@@ -33,19 +33,20 @@ class MainApp : Application() {
         graphLayout = GraphLayout()
 
         rootLayout = initLayouts()
+
+        boardApplet.init()
     }
 
     @Throws(Exception::class)
     override fun start(primaryStage: Stage) {
-
-        val scene = Scene(rootLayout, 1600.0, 900.0)
+        val scene = Scene(rootLayout, 900.0, 600.0)
         primaryStage.title = TITLE
         primaryStage.scene = scene
         primaryStage.show()
         surface.stage = primaryStage
     }
 
-    private fun initLayouts() = MainLayout(surface, boardApplet).apply {
+    private fun initLayouts() = HBox().apply {
         background = backgroundColor(wall)
 
         children.addAll(
@@ -73,6 +74,10 @@ class MainApp : Application() {
 
             responsiveSize(variablesLayout)
         }
+    }
+
+    interface MainListener {
+        fun init()
     }
 
     companion object {

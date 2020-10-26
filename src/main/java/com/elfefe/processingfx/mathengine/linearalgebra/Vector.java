@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.linearalgebra;
 
-import com.elfefe.fonctionne.mathengine.StatUtils;
+import com.elfefe.processingfx.mathengine.StatUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

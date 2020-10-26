@@ -1,9 +1,9 @@
 package com.elfefe.processingfx.mathengine.parser;
 
-import com.elfefe.fonctionne.mathengine.linearalgebra.Matrix;
-import com.elfefe.fonctionne.mathengine.parser.nodes.*;
-import com.elfefe.fonctionne.mathengine.parser.operators.binary.Add;
-import com.elfefe.fonctionne.mathengine.parser.operators.unary.simple.Cosine;
+import com.elfefe.processingfx.mathengine.linearalgebra.Matrix;
+import com.elfefe.processingfx.mathengine.parser.nodes.*;
+import com.elfefe.processingfx.mathengine.parser.operators.binary.Add;
+import com.elfefe.processingfx.mathengine.parser.operators.unary.simple.Cosine;
 
 public final class Tester
 {

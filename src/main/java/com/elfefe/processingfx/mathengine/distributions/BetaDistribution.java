@@ -1,6 +1,6 @@
 package com.elfefe.processingfx.mathengine.distributions;
 
-import com.elfefe.fonctionne.mathengine.special.Gamma;
+import com.elfefe.processingfx.mathengine.special.Gamma;
 
 /**
  * Class representing the Beta {@link ProbabilityDistribution}
