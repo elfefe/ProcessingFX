@@ -1,11 +1,13 @@
 package com.elfefe.processingfx.javafx.layout
 
 import com.elfefe.processingfx.util.backgroundColor
+import com.elfefe.processingfx.util.borders
+import com.elfefe.processingfx.util.primary
 import com.elfefe.processingfx.util.responsiveSize
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Insets
 import javafx.scene.control.TextField
-import javafx.scene.layout.HBox
+import javafx.scene.layout.*
 import javafx.scene.paint.Color
 
 class FunctionLayout: HBox() {
@@ -19,7 +21,9 @@ class FunctionLayout: HBox() {
     val currentFunction = SimpleStringProperty()
 
     init {
-        background = backgroundColor(Color.TRANSPARENT)
+        background = backgroundColor(primary)
+        border = Border(BorderStroke(borders, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT))
+
         padding = Insets(10.0, 10.0, 10.0, 10.0)
 
         children.addAll(function)
@@ -32,6 +36,7 @@ class FunctionLayout: HBox() {
     }
 
     private fun function() = TextField().apply {
+
         promptText = FUNCTION_PROMPT
 
         textProperty().addListener { _, _, value ->

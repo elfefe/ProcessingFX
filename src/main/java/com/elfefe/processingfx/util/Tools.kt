@@ -28,7 +28,7 @@ fun Region.responsiveSize(child: Region, widthDivider: Double = 1.0, heightDivid
 
 fun TextField.doubleFormater() {
     textFormatter = TextFormatter<String>(
-            UnaryOperator<TextFormatter.Change?> { change ->
+            UnaryOperator { change ->
                 return@UnaryOperator change?.run {
                     if ((this@doubleFormater.text + text).matches("^(-?)([0-9]+\\.?[0-9]*)\$".toRegex())) return@run change
                     return@run null

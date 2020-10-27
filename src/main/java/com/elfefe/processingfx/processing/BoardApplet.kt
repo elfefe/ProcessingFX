@@ -3,30 +3,39 @@ package com.elfefe.processingfx.processing
 import com.elfefe.processingfx.javafx.MainApp
 import com.elfefe.processingfx.javafx.layout.VariableLayout
 import com.elfefe.processingfx.mathengine.Function
-import com.elfefe.processingfx.util.until
+import com.elfefe.processingfx.util.*
 
 import javafx.application.Application
+import javafx.beans.property.SimpleFloatProperty
+import javafx.beans.property.SimpleIntegerProperty
+import javafx.scene.paint.Color
 import processing.core.PApplet
 import processing.core.PSurface
 import processing.javafx.PSurfaceFX
+import java.lang.Exception
 import kotlin.concurrent.thread
+import kotlin.math.abs
+import kotlin.math.floor
+import kotlin.math.roundToInt
 
 class BoardApplet : PApplet(), MainApp.MainListener {
-    @JvmField
-    var bgColor = 255
-    lateinit var main: MainApp
+    val boardWidth = SimpleIntegerProperty()
+    val boardHeight = SimpleIntegerProperty()
+
+    var showCenter = true
+    var showMinX = true
+    var showMaxX = true
+    var showMinY = true
+    var showMaxY = true
+
+    private lateinit var main: MainApp
+
     private val drawProperty: DrawProperty = DrawProperty()
 
     override fun init() {
         main = MainApp.INSTANCE
 
         main.variablesLayout.run {
-            yPos.addListener { _, _, value ->
-                drawProperty.verticalIndicatorPosition = value.toFloat()
-            }
-            xPos.addListener { _, _, value ->
-                drawProperty.horizontalIndicatorPosition = value.toFloat()
-            }
             xGap.addListener { _, _, value ->
                 drawProperty.horizontalStepsGap = value.toFloat()
             }
@@ -59,10 +68,8 @@ class BoardApplet : PApplet(), MainApp.MainListener {
         }
 
         while (fxSurface.stage == null) {
-            try {
-                Thread.sleep(5)
-            } catch (e: InterruptedException) {
-            }
+            try { Thread.sleep(5)
+            } catch (e: InterruptedException) {}
         }
 
         kotlin.io.println("Surface init")
@@ -78,29 +85,36 @@ class BoardApplet : PApplet(), MainApp.MainListener {
     }
 
     override fun setup() {
-        background(bgColor)
+        background(fxColor(primary))
+        frameRate(30f)
         surface.setResizable(true)
         kotlin.io.println("Board setup")
     }
 
+    private fun checkResize() {
+        if (boardWidth.get() != width) boardWidth.value = width
+        if (boardHeight.get() != height) boardHeight.value = height
+    }
+
     override fun draw() {
-        background(bgColor)
-        fill(0)
+        checkResize()
+        background(fxColor(primary))
+        stroke(fxColor(white))
 
         /*** Vertical indicator */
         line(
-                width / 2f + drawProperty.verticalIndicatorPosition,
-                drawProperty.horizontalIndicatorPosition,
-                width / 2f + drawProperty.verticalIndicatorPosition,
-                height + drawProperty.horizontalIndicatorPosition
+                (width / 2f + drawProperty.verticalIndicatorPosition).toInt().toFloat(),
+                0f,
+                (width / 2f + drawProperty.verticalIndicatorPosition).toInt().toFloat(),
+                height.toFloat()
         )
 
         /*** Horizontal indicator */
         line(
-                drawProperty.verticalIndicatorPosition,
-                height / 2 + drawProperty.horizontalIndicatorPosition,
-                width + drawProperty.verticalIndicatorPosition,
-                height / 2 + drawProperty.horizontalIndicatorPosition
+                0f,
+                (height / 2f + drawProperty.horizontalIndicatorPosition).toInt().toFloat(),
+                width.toFloat(),
+                (height / 2f + drawProperty.horizontalIndicatorPosition).toInt().toFloat()
         )
 
         /*** Vertical indicator steps */
@@ -145,28 +159,47 @@ class BoardApplet : PApplet(), MainApp.MainListener {
             )
         }
 
-        /*** Shape */
-        val half = width / 2
-        val baseX = -half.toDouble()
-        val baseY = (height / 2) - drawProperty.function.evaluateAt(baseX)
-        val steps = 1.0
-
-        var x = baseX
-        var y = baseY
-
-        baseX.until(half.toDouble(), steps) { currentX ->
-            val nextY = ((height / 2) - (drawProperty.function.evaluateAt(currentX) * drawProperty.verticalStepsGap)) + drawProperty.verticalIndicatorPosition
-            val nextX = ((currentX * drawProperty.horizontalStepsGap) + half + drawProperty.horizontalIndicatorPosition)
-
-            line(x.toFloat(), y.toFloat(), nextX.toFloat(), nextY.toFloat())
-
-            x = nextX
-            y = nextY
+        /*** Center */
+        if (showCenter) {
+            pushStyle()
+            fill(fxColor(functionCursor))
+            text("0", width / 2f + drawProperty.verticalIndicatorPosition + 5f, height / 2f + drawProperty.horizontalIndicatorPosition - 5f)
+            popStyle()
         }
-    }
 
-    override fun mouseDragged() {
-        line(mouseX.toFloat(), mouseY.toFloat(), pmouseX.toFloat(), pmouseY.toFloat())
+        /*** Shape */
+        try {
+            val half = width / 2
+            val baseX = -half.toDouble()
+            val baseY = (height / 2) - drawProperty.function.evaluateAt(baseX)
+            val steps = 1.0
+
+            var x = baseX
+            var y = baseY
+
+            baseX.until(half.toDouble(), steps) { currentX ->
+                val nextY = ((height / 2) - (drawProperty.function.evaluateAt(currentX) * drawProperty.verticalStepsGap)) + drawProperty.horizontalIndicatorPosition
+                val nextX = ((currentX * drawProperty.horizontalStepsGap) + half + drawProperty.verticalIndicatorPosition)
+
+                line(x.toFloat(), y.toFloat(), nextX.toFloat(), nextY.toFloat())
+
+                pushStyle()
+                fill(fxColor(functionCursor))
+                stroke(fxColor(functionCursor))
+                if (mouseX >= floor(x) && mouseX < floor(nextX)) {
+                    val factor = abs(x - nextX) / abs(x - mouseX)
+                    val mY = (y - ((y - nextY) / factor)).toFloat()
+                    ellipse(mouseX.toFloat(), mY, 2f, 2f)
+                    text("x:${mouseX.toFloat()} y:$mY", mouseX.toFloat() + 15, mouseY.toFloat() + 5)
+                }
+                popStyle()
+
+                x = nextX
+                y = nextY
+            }
+        } catch (e: Exception) {
+            kotlin.io.println("Erreur: ${e.localizedMessage}")
+        }
     }
 
     data class DrawProperty(
@@ -174,8 +207,8 @@ class BoardApplet : PApplet(), MainApp.MainListener {
             var horizontalIndicatorPosition: Float = VariableLayout.DEFAULT_POS.toFloat(),
             var verticalStepsGap: Float = VariableLayout.DEFAULT_GAP.toFloat(),
             var horizontalStepsGap: Float = VariableLayout.DEFAULT_GAP.toFloat(),
-            var verticalStepsHalfLength: Float = 2f,
-            var horizontalStepsHalfLength: Float = 2f,
+            var verticalStepsHalfLength: Float = 1f,
+            var horizontalStepsHalfLength: Float = 1f,
             var mouseHover: Boolean = false,
             var mouseX: Float = 0f,
             var mouseY: Float = 0f,
